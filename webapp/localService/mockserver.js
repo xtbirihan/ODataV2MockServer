@@ -15,6 +15,14 @@ sap.ui.define([
                 bGenerateMissingMockData: true
             });
 
+            var fnCustom = function(oEvent) {
+				var oXhr = oEvent.getParameter("oXhr");
+				if (oXhr && oXhr.url.indexOf("first") > -1) {
+					oEvent.getParameter("oFilteredData").results.splice(3, 100);
+				}
+			};
+			oMockServer.attachAfter("GET", fnCustom, "Meetups");
+
             oMockServer.start();
             Log.info("Running the app with mock data");            
         }
