@@ -1,0 +1,14 @@
+{
+  "name": "sap.ui.core.tutorial.mockserver",
+  "version": "1.0.0",
+  "description": "Code: OData V2 Mock Server",
+  "scripts": {
+    "start": "ui5 serve",
+    "build": "ui5 build"
+  },
+  "author": "H Tugay Birihan",
+  "license": "ISC",
+  "devDependencies": {
+    "@ui5/cli": "^2.0.0"
+  }
+}
